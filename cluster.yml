@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-cluster131
+  region: ap-south-1
+
+nodeGroups:
+  - name: mynode131
+    ssh:
+       publicKeyName: mykey1111
+    instanceType: t2.micro
+    desiredCapacity: 3
+

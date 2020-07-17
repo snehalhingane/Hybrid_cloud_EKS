@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mypvc13
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+      requests:
+          storage: 20Gi
+      volumeMounts:
+      - name: Persistent-storage
+        mountPath: /var/www/html
+  volumes:
+  - name: persistent-storage
+     persistentVolumeClaim:
+         claimName: mypvc13
